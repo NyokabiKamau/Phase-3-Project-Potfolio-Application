@@ -12,3 +12,4 @@ A user can have a maximum of 10 skills.
 A user should be able to view their listed skills.
 A user should be able add, update and delete their skills.
 In order to use the application, the user must be logged in.
+
