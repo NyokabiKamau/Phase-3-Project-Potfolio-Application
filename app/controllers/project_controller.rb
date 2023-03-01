@@ -14,7 +14,15 @@ class ProjectController < AppController
         payload
     end
 
- 
+    # @method: Add a new Project to the DB
+    post '/projects/create' do
+        begin
+            project = Project.create( self.data(create: true) )
+            json_response(code: 201, data: project)
+        rescue => e
+            json_response(code: 422, data: { error: e.message })
+        end
+    end
 
   
 end
