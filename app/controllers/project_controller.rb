@@ -5,15 +5,6 @@ class ProjectController < AppController
         "Hello, Welcome"
     end
 
-    # @helper: format body data
-    def data(create: false)
-        payload = JSON.parse(request.body.read)
-        if create
-            payload["createdAt"] = Time.now
-        end
-        payload
-    end
-
     # @method: Add a new Project to the DB
     post '/projects/create' do
         begin
@@ -24,5 +15,26 @@ class ProjectController < AppController
         end
     end
 
-  
+    # @method: Display all projects
+    get '/projects' do
+        project = Project.all
+        project.to_json
+    end
+
+    
+
+
+    private
+
+    # @helper: format body data
+    def data(create: false)
+    payload = JSON.parse(request.body.read)
+    if create
+        payload["createdAt"] = Time.now
+    end
+    payload
+    end
+
+
+
 end
