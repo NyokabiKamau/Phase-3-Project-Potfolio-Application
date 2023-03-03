@@ -21,10 +21,11 @@ gem 'require_all', '~> 3.0'
 group :development do
     gem 'rerun', '~> 0.14.0'
     gem 'faker'
+    gem 'pry'
 end
 
 group :test do
     gem 'rack-test', '~> 2.0', '>= 2.0.2'
     gem 'rspec', '~> 3.12'
-    gem 'faker'
+    #gem 'faker'
 end
