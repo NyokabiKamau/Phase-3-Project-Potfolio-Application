@@ -1,16 +1,6 @@
 puts "🌱 Seeding data..."
 
-# run loop 30 times
-# 30.times do 
-#     # create random project product data
-#     project = Project.create(
-#         title: Faker::Company.industry,
-#         description: Faker::Company.catch_phrase,
-#         user_id: user.id
-#     )
-# end
-
-30.times do 
+10.times do 
     
     user = User.create(
         name: Faker::Internet.username,
