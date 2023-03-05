@@ -41,10 +41,10 @@ class UserController < AppController
       user_skills.limit(10).to_json
     end  
 
-    # @method: Display all projects from user
-    get '/user-projects/:id' do
-      user-projects = User.find(self.project_id).skills.all
-      user-projects.to_json
+   # @method: Display all projects from user
+   get '/user-projects/:id' do
+    project_skill = User.find(self.user_id).projects.all
+    project_skill.to_json
     end  
 
     # @method: Display all Users
