@@ -34,6 +34,24 @@ class UserController < AppController
         error_response(422, e)
       end
     end
+
+    # @method: Display all skills from user with a limit of 10
+    get '/user-skills/:id' do
+      user_skills = User.find(self.user_id).skills.all
+      user_skills.limit(10).to_json
+    end  
+
+    # @method: Display all projects from user
+    get '/user-projects/:id' do
+      user-projects = User.find(self.project_id).skills.all
+      user-projects.to_json
+    end  
+
+    # @method: Display all Users
+    get '/users' do
+      user = User.all
+      user.to_json
+    end  
   
     private
   
@@ -41,6 +59,11 @@ class UserController < AppController
     def user_data
       JSON.parse(request.body.read)
     end
+
+     # @helper: retrieve project :id
+     def user_id
+      params['id'].to_i
+  end
   
   end
   
