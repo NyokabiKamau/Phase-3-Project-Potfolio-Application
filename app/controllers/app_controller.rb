@@ -14,7 +14,7 @@ class AppController < Sinatra::Base
   
     options "*" do
       response.headers["Access-Control-Allow-Methods"] = "GET, PUT, POST, DELETE, OPTIONS"
-      response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
+      response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Application, Accept, X-User-Email, X-Auth-Token"
       response.headers["Access-Control-Allow-Origin"] = "*"
       200
     end
