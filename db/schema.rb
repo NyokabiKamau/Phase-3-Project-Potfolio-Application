@@ -14,14 +14,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_28_130945) do
   create_table "projects", force: :cascade do |t|
     t.string "title", null: false
     t.string "description", null: false
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.integer "status", default: 0, null: false
     t.datetime "createdAt"
   end
 
   create_table "skills", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.datetime "createdAt"
   end
 
