@@ -13,7 +13,7 @@ User.destroy_all
         password_hash: Faker::Internet.password
     )
 
-    rand(1..5).times do
+    rand(4..7).times do
         Project.create(
             title: Faker::Company.industry,
             description: Faker::Company.catch_phrase,
@@ -21,7 +21,7 @@ User.destroy_all
         )
     end
 
-    rand(1..10).times do
+    rand(4..10).times do
         Skill.create(
         name: Faker::Company.profession,
         user_id: user.id,
