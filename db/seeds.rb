@@ -1,7 +1,12 @@
 puts "🌱 Seeding data..."
 
-10.times do 
-    
+puts "Deleting old data..."
+Project.destroy_all
+Skill.destroy_all
+User.destroy_all
+
+
+1.times do 
     user = User.create(
         name: Faker::Internet.username,
         email: Faker::Internet.email(name: 'Nancy'),
@@ -24,19 +29,6 @@ puts "🌱 Seeding data..."
     )
     end
 end
-
-
-    
-
-    # # create between 1 and 5 reviews for each product
-    # rand(1..5).times do
-    #     Review.create(
-    #         star_rating: rand(1..5),
-    #         comment: Faker::Quote.matz,
-    #         product_id: product.id,
-    #         user_id: user.id
-    #     )
-    # end
 
 
 puts "Done 🌱 Seeding"
