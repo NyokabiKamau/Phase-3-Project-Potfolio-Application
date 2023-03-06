@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+# ruby '2.7.4'
+
 gem 'sinatra', '~> 3.0', '>= 3.0.5'
 
 gem 'sinatra-cross_origin', '~> 0.4.0'
@@ -18,7 +20,7 @@ gem 'puma', '~> 6.1'
 
 gem 'require_all', '~> 3.0'
 
-group :development do
+group :development, :production do
     gem 'rerun', '~> 0.14.0'
     gem 'faker'
     gem 'pry'
